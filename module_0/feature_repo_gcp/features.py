@@ -12,7 +12,12 @@ from entities import *
 driver_hourly_stats_view = FeatureView(
     name="driver_hourly_stats",
     description="Hourly driver conversion and acceptance-rate features",
-    tags={"production": "True", "domain": "mobility", "managed_by": "feast_ci"},
+    tags={
+    "production": "True",
+    "domain": "mobility",
+    "managed_by": "feast_ci",
+    "ci_test": "v1",
+},
     owner="panrui1998110@gmail.com",
     entities=[driver],
     ttl=timedelta(seconds=8640000000),
