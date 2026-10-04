@@ -1,9 +1,9 @@
 variable "project_name" {
   type        = string
-  description = "The project identifier is used to uniquely namespace resources"
+  description = "feast-workshop-2026-10-04"
 }
 
 variable "gcp_project" {
   type        = string
-  description = "The GCP project id"
+  description = "feast-workshop-2026-10-04"
 }
