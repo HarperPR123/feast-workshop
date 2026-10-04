@@ -11,7 +11,9 @@ from entities import *
 
 driver_hourly_stats_view = FeatureView(
     name="driver_hourly_stats",
-    description="Hourly features",
+    description="Hourly driver conversion and acceptance-rate features",
+    tags={"production": "True", "domain": "mobility", "managed_by": "feast_ci"},
+    owner="panrui1998110@gmail.com",
     entities=[driver],
     ttl=timedelta(seconds=8640000000),
     schema=[
@@ -19,7 +21,5 @@ driver_hourly_stats_view = FeatureView(
         Field(name="acc_rate", dtype=Float32),
     ],
     online=True,
-    source=driver_stats,
-    tags={"production": "True"},
-    owner="test2@gmail.com",
+    source=driver_stats
 )
